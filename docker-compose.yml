@@ -31,8 +31,6 @@ services:
       - dev
 
   frontend-host:
-    depends_on:
-      - frontend-child
     build:
       context: ./microboard-frontend-host
     networks:
