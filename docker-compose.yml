@@ -8,8 +8,8 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d
-      - ./etc/letsencrypt:/etc/letsencrypt
+      - "./nginx/default.conf:/etc/nginx/conf.d"
+      # - '/etc/letsencrypt:/etc/letsencrypt'
     depends_on:
       - backend
       - frontend-host
@@ -31,6 +31,8 @@ services:
       - dev
 
   frontend-host:
+    depends_on:
+      - frontend-child
     build:
       context: ./microboard-frontend-host
     networks:
