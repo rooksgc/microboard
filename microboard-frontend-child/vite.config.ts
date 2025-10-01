@@ -18,7 +18,7 @@ export default defineConfig({
   ],
   preview: {
     host: "localhost",
-    port: 4174,
+    port: 3001,
     strictPort: true,
   },
   build: {

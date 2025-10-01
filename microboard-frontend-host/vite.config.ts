@@ -9,8 +9,8 @@ export default defineConfig({
       name: "microboard-frontend-host",
       // The remotes we want to consume
       remotes: {
-        MicroboardChild: {
-          external: "http://localhost:4174/assets/remoteEntry.js",
+        MicroboardFrontendChild: {
+          external: "http://localhost:3001/assets/remoteEntry.js",
           externalType: "url",
         },
       },
@@ -20,7 +20,7 @@ export default defineConfig({
   ],
   preview: {
     host: "localhost",
-    port: 4173,
+    port: 3000,
     strictPort: true,
   },
   build: {
