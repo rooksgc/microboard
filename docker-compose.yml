@@ -24,14 +24,16 @@ services:
     networks:
       - dev
 
-  frontend-host:
-    build:
-      context: ./microboard-frontend-host
-    networks:
-      - dev
-
   frontend-child:
     build:
       context: ./microboard-frontend-child
+    networks:
+      - dev
+
+  frontend-host:
+    depends_on:
+      - frontend-child
+    build:
+      context: ./microboard-frontend-host
     networks:
       - dev
