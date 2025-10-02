@@ -30,7 +30,7 @@ def get_items():
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://31.41.154.245",
+        "rooksgc.ru",
     ],
     allow_credentials=True,
     allow_methods=["*"],
